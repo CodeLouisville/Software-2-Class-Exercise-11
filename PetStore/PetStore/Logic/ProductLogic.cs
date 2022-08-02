@@ -10,13 +10,15 @@ using System.Threading.Tasks;
 
 namespace PetStore
 {
-    internal class ProductLogic : IProductLogic
+    public class ProductLogic : IProductLogic
     {
         private readonly IProductRepository _productRepo;
+        private readonly IOrderRepository _orderRepo;
 
-        public ProductLogic(IProductRepository productRepository)
+        public ProductLogic(IProductRepository productRepository, IOrderRepository orderRepository)
         {
             _productRepo = productRepository;
+            _orderRepo = orderRepository;
         }
 
         public void AddProduct(Product product)
@@ -36,6 +38,16 @@ namespace PetStore
         public Product GetProductById(int id)
         {
             return _productRepo.GetProductById(id);
+        }
+
+        public void AddOrder(Order order)
+        {
+            _orderRepo.AddOrder(order);
+        }
+
+        public Order GetOrder(int id)
+        {
+            return _orderRepo.GetOrder(id);
         }
     }
 }

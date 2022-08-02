@@ -25,5 +25,18 @@ namespace PetStore.Logic
         /// </summary>
         /// <param name="productId">The id given to the product.</param>
         public Product GetProductById(int productId);
+
+        /// <summary>
+        /// Add an order with products
+        /// </summary>
+        /// <param name="order">The order object</param>
+        public void AddOrder(Order order);
+
+        /// <summary>
+        /// Get an order by its ID
+        /// </summary>
+        /// <param name="id">The key for the object</param>
+        /// <returns>The order</returns>
+        public Order GetOrder(int id);
     }
 }

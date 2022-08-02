@@ -15,6 +15,7 @@ namespace PetStore.Data
         public int Quantity { get; set; }
 
         public string Description { get; set; }
-        public int ProductId { get; internal set; }
+        public int ProductId { get; set; }
+        public int OrderId { get; set; }
     }
 }
