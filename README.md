@@ -1,4 +1,4 @@
-# Software 2 - Class Exercise 6
+# Software 2 - Class Exercise 11
 # Goals
 Convert the application to an API
 
